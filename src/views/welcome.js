@@ -1,4 +1,4 @@
-import { createElement, useState } from "../Fluid";
+import { useState } from "../Fluid";
 import Sidebar from "../component/Sidebar";
 
 function welcomeView() {
