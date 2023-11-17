@@ -37,5 +37,5 @@ export default function Sidebar({ elements }) {
 
     sidebar.append(navList);
 
-    $( 'body' ).append(sidebar);
+    $('body').append(sidebar);
 };
