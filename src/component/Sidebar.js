@@ -1,6 +1,9 @@
+import { useState } from '../Fluid';
 import $ from 'jquery';
 
-export default function Sidebar({ items }) {
+export default function Sidebar({ elements }) {
+
+    const [getItems, setItems] = useState(elements);
 
     const sidebar = $('<div>')
         .addClass('d-flex flex-column flex-shrink-0 bg-body-tertiary')
@@ -17,8 +20,8 @@ export default function Sidebar({ items }) {
     const navList = $('<ul>')
         .addClass('nav nav-pills nav-flush flex-column mb-auto text-center');
     
-    if (Array.isArray(items)) { 
-        items.forEach(item => {
+    if (Array.isArray(getItems())) { 
+        getItems().forEach(item => {
             const listItem = $('<li>')
                 .addClass('nav-item')
                 .append(
