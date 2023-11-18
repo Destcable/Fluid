@@ -6,14 +6,15 @@ export default function Sidebar({ elements }) {
     const [getItems, setItems] = useState(elements);
 
     const sidebar = $('<div>')
-        .addClass('d-flex flex-column flex-shrink-0 bg-body-tertiary')
+        .addClass('d-flex flex-column flex-shrink-0')
+        .css('background-color', '#1B3446')
         .css('height', '100vh')
         .css('width', '4.5rem');
 
     sidebar.append(
         $('<a>')
             .attr('href', '/')
-            .attr('class', 'd-flex justify-content-center p-3 link-body-emphasis text-decoration-none')
+            .attr('class', 'd-flex justify-content-center p-3 link-body-emphasis text-decoration-none text-light')
             .text('{TG}')
     );
 
@@ -27,7 +28,7 @@ export default function Sidebar({ elements }) {
                 .append(
                     $('<a>')
                         .attr('href', '#')
-                        .attr('class', 'nav-link py-3 border-bottom rounded-0')
+                        .attr('class', 'nav-link py-3 rounded-0 text-light')
                         .text(item.title)
             );
     

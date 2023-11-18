@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import Header from "../component/Header";
 import Sidebar from "../component/Sidebar";
 
 function welcomeView() {
@@ -7,9 +9,14 @@ function welcomeView() {
         { title: 'PAV' }
     ];
 
-    return(
-        Sidebar({ elements: sidebarItems })
-    );
+    $('body').addClass('d-flex');
+
+    Sidebar({ 
+        elements: sidebarItems 
+    });
+    Header({ 
+        title: "Информация"
+    });
 };
 
 export default welcomeView;
